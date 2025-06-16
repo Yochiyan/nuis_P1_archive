@@ -1,18 +1,40 @@
 /*
-ï¿½wï¿½Ğ”Ôï¿½ï¿½F32025017
-ï¿½ï¿½ï¿½Oï¿½Fï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½v
-ï¿½tï¿½@ï¿½Cï¿½ï¿½ï¿½ï¿½ï¿½Fï¿½ï¿½ï¿½K4-15
-ï¿½ì¬ï¿½ï¿½ï¿½F2025/4/21
-ï¿½vï¿½Zï¿½ï¿½
+ŠwĞ”Ô†F32025017
+–¼‘OF‰Á“‡œ‹v
+ƒtƒ@ƒCƒ‹–¼F‰‰K4-15
+ì¬“úF2025/4/21
+ŒvZ®
 */
 
 #include <stdio.h>
 
 int main(void)
 {
-	
-	int s,s1, s
-	printf("ï¿½gï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í‚ï¿½ï¿½ï¿½F");	scanf("%d", &a);
-	printf("ï¿½Wï¿½ï¿½ï¿½Ìdï¿½ï¿½%.1fï¿½Å‚ï¿½ï¿½B\n", (a - 100) * 0.9);
-	return 0;
+    int start, end, step;
+
+    // ”ÍˆÍ‚Ì“ü—Í
+    printf("‰½cm‚©‚çF");	scanf("%d", &start);
+
+    printf("‰½cm‚Ü‚ÅF");	scanf("%d", &end);
+
+    printf("‰½cm‚²‚ÆF");	scanf("%d", &step);
+
+    // “ü—Íƒ`ƒFƒbƒN
+    if (start > end || step <= 0) {
+        printf("“ü—Í‚ª•s³‚Å‚·BŠJn’l <= I—¹’lA‚©‚Â‘•ª > 0 ‚ğ–‚½‚·•K—v‚ª‚ ‚è‚Ü‚·B\n");
+        return 1;
+    }
+
+    // •\‚Ìƒwƒbƒ_[
+    printf("\ng’·(cm)  •W€‘Ìd(kg)\n");
+    printf("----------------------\n");
+
+    // ŒvZ‚Æo—Í
+    for (int height = start; height <= end; height += step) {
+        double standard_weight = (height - 100) * 0.9;
+        printf("%-10d %.2f\n", height, standard_weight);
+    }
+
+    return 0;
 }
+
