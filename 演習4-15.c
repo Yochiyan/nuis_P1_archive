@@ -13,21 +13,18 @@ int main(void)
     int start, end, step;
 
     // 範囲の入力
-    printf("何cmから：");	scanf("%d", &start);
+    printf("何cmから：");
+    scanf("%d", &start);
 
-    printf("何cmまで：");	scanf("%d", &end);
+    printf("何cmまで：");
+    scanf("%d", &end);
 
-    printf("何cmごと：");	scanf("%d", &step);
+    printf("何cmごと：");
+    scanf("%d", &step);
 
-    // 入力チェック
-    if (start > end || step <= 0) {
-        printf("入力が不正です。開始値 <= 終了値、かつ増分 > 0 を満たす必要があります。\n");
-        return 1;
-    }
-
-    // 表のヘッダー
-    printf("\n身長(cm)  標準体重(kg)\n");
-    printf("----------------------\n");
+    // ヘッダー表示
+    //printf("\n身長(cm)  標準体重(kg)\n");
+    //printf("----------------------\n");
 
     // 計算と出力
     for (int height = start; height <= end; height += step) {
@@ -37,4 +34,3 @@ int main(void)
 
     return 0;
 }
-
